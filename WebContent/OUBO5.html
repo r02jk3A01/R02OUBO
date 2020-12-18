@@ -8,7 +8,11 @@
 <h2>数字を入力してください</h2>
 </body>
 <form name="form1" onSubmit="return test1()">
-<input type="number" id="input1" value="" minlength="5" maxlength="5" required>
+<input type="number" placeholder='５つのナンバーを入力' pattern="[0-9]"
+	oncopy="return false" onpaste="return false" id="input1" maxlength="5" style="ime-mode:disabled"
+	onkeyup="InputCharCheck(5,'input1','report1');" required>
+
+<span id="report1">（入力して下さい）</span>
 <input type="submit" value="送信">
 </form>
 </body>
